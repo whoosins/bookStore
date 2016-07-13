@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta itemprop="description" name="Description"
+            content="Async Fragments Demo using Marko"/>
+        <title>Book Store</title>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/searchBook.css">
+    </head>
+    <body>
+    <div id="wrapper">
+    <div class="row">
+    <div class="col-sm-6">
+         <form action="/addBook" method="get" id="form1">
+          <input type="submit" class="btn btn-primary" value="Add Book" id="addBook">
+          </form>
+    </div>
+    <div class="col-sm-6">
+    <form action="/searchBook" method="post" id="form2">
+    <input type="text" id="searchTb" name="searchKey">
+    <input type="submit" class="btn btn-primary" value="Search" id="searchBook">
+    </form>
+    </div>
+    </div>
+    <div class="panel panel-info" id="panel"  for(books in data.book)>
+        <div class="panel-heading">
+        <h3>Title:${books.title}</h3>
+        </div>
+        <h4>Author:${books.author}</h4>
+        <h4>Price:${books.price}</h4>
+        <h4>Isbn:${books.isbn}</h4>
+        <h4>Avg Rating:${books.averageRating}</h4>
+        <table><tbody><tr>
+        <td id="addReview">
+        <form action="/addReview/${books._id}" method="get">
+        <input type="submit" class="btn btn-primary" value="Add Review" id="addReviewBtn">
+        </form>
+        </td>
+        <td id="showReview">
+        <form action="/showReview/${books._id}" method="post">
+        <input type="submit" class="btn btn-primary" value="Show Review" id="showReviewBtn">
+        </form>
+        </td>
+        <td id="delete">
+        <form action="/delete/${books._id}" method="post">
+        <input type="submit" class="btn btn-primary" value="Delete" id="deleteBtn">
+        </form>
+        </td>
+        <td id="update">
+        <form action="/update/${books._id}" method="get">
+        <input type="submit" class="btn btn-primary" value="Update" id="updateBookBtn">
+        </form>
+        </td>
+        </tr></tbody></table>
+            </div>
+            </div>
+    </body>
+</html> 
+

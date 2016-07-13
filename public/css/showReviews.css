@@ -1,0 +1,26 @@
+body
+{
+	background-color: #eeeeee;
+}
+#wrapper
+{
+	background-color:#dddddd;
+	width:800px;
+	margin-left:350px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#panel
+{	
+	width:600px;
+	background-color: #eeeeee;
+	margin-left:100px;
+
+}
+input
+{
+	margin-left:300px;
+}
+.btn{
+	background-color:#20b2aa;
+}

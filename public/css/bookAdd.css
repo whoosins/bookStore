@@ -1,0 +1,34 @@
+#panel
+{
+	width:740px;
+	height:100%;
+	margin:30px;
+}
+body
+{
+	background-color: #eeeeee;
+}
+#addBook
+{
+	margin-top:20px;
+	margin-left:300px;
+
+}
+label
+{
+	margin-bottom:3px;
+	margin-top:10px;
+}
+input
+{
+	padding:6px;
+}
+.btn{
+	background-color:#20b2aa;
+}
+#wrapper
+{
+	background-color:#dddddd;
+	width:800px;
+	margin-left:350px;
+}

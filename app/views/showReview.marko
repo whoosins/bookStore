@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta itemprop="description" name="Description"
+            content="Async Fragments Demo using Marko"/>
+        <title>Books Mania</title>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/showReviews.css">
+	     
+       
+       </head>
+    <body>
+    <h1>${data.message}</h1>
+    <div id="wrapper"> 
+      <div class="panel panel-info" id="panel" for(rv in data.reviews)>
+        <div class="panel-heading">
+        <form  action="/books" method="get">
+        <h4>Name:${rv.name}</h4>
+        <h4>Comment:${rv.comment}</h4>
+        <h4>Rating:${rv.rating}</h4>
+        </form>
+        </div>
+      </div>
+    <div id="addReview">
+    <form action="/addReview/${data.book._id}" method="get">
+    <input type="submit" class="btn btn-primary" value="Add Review" id="addReviewBtn">
+    </form>
+    </div> 
+  </div>
+    </body>
+</html>
