@@ -27,7 +27,7 @@ var config = {
       name: 'assignment6'
     },
     port: process.env.PORT || 3000,
-    db: ' mongodb://hussain:root@ds025752.mlab.com:25752/heroku_h0fcsqbt'
+    db: 'mongodb://hussain:root@ds025752.mlab.com:25752/heroku_h0fcsqbt'
   }
 };
 
