@@ -5,7 +5,7 @@ var express = require('express'),
   glob = require('glob'),
   mongoose = require('mongoose');
 
-mongoose.connect(config.db);
+mongoose.connect('mongodb://hussain:root@ds025752.mlab.com:25752/heroku_h0fcsqbt');
 var db = mongoose.connection;
 db.on('error', function () {
   throw new Error('unable to connect to database at ' + config.db);
