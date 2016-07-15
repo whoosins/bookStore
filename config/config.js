@@ -1,9 +1,9 @@
 var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
-    env = process.env.NODE_ENV || 'development';
+    env = process.env.NODE_ENV || 'production';
 
-var config = {
-  development: {
+/*var config = {
+  production: {
     root: rootPath,
     app: {
       name: 'assignment6'
@@ -19,15 +19,15 @@ var config = {
     },
     port: process.env.PORT || 3000,
     db: 'mongodb://localhost/assignment6-test'
-  },
-
+  };*/
+var config = {
   production: {
     root: rootPath,
     app: {
       name: 'assignment6'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/assignment6-production'
+    db: ' mongodb://hussain:root@ds025752.mlab.com:25752/heroku_h0fcsqbt'
   }
 };
 
